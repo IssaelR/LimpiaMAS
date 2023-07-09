@@ -1,0 +1,20 @@
+﻿@model LimpiaMAS.Models.TbLimpiador
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Usuario: @ViewData["Usr"]</h1>
+        <h1>Nombre y Apellido: @ViewData["NomApe"]</h1>
+        <h1>Diección: @ViewData["Dir"]</h1>
+        <h1>Distrito: @ViewData["Dist"]</h1>
+        <h1>Telefeno: @ViewData["Tel"]</h1>
+        <h1>Tarifa: @ViewData["Tar"]</h1>
+        <h1>Servicio: @ViewData["Serv"]</h1>
+        <a asp-action="returnIndexUsr" id="btn-return">Volver</a>
+    </body>
+</html>

@@ -1,0 +1,194 @@
+﻿
+
+@import url('https://fonts.googleapis.com/css2?family=Comme&family=Lato&family=Montserrat&family=Poppins&family=Roboto&family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto Mono;
+}
+
+body {
+    margin: 0;
+    margin-right: 300px;
+    height: 1200px;
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar .links {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+    a:hover {
+        color: white;
+    }
+
+/*HEADER*/
+header {
+    position: relative;
+    padding: 0;
+    color: black;
+}
+
+/*NAVBAR*/
+.navbar {
+    margin-left: 6vw;
+    position: sticky;
+    width: 84vw;
+    height: 8vh; /*"viewport height" (altura de la ventana gráfica)*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #FDAFAB;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /*background-image: linear-gradient(90deg, rgba(137, 235, 202, 0.5) 30%, rgba(122, 139, 239, 0.5));*/
+}
+
+    .navbar .logo a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: black;
+        margin-left: 5vw;
+        transition: all 0.2s ease-in-out;
+    }
+
+        .navbar .logo a:hover {
+            transform: scale(1.05);
+            color: white;
+        }
+
+    .navbar .links {
+        font-size: calc(0.4rem + 0.6vw);
+        display: flex;
+        gap: 4vw;
+        height: 8px;
+        /*margin-left: 6vw; "viewport width" (ancho de la ventana gráfica)*/
+    }
+
+
+.register-btn {
+    background-color: #B6E3E9;
+    color: black;
+    padding: 0.5rem 1rem;
+    margin-top: -0.1vw;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: calc(0.6rem + 0.6vw);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+    /*hover, aplicar estilos a un elemento cuando el cursor esta sobre el*/
+    .register-btn:hover {
+        transform: scale(1.05);
+        color: #ffffff;
+    }
+    /*active, aplica estilos a un elemento cuando se clickea estem mismo*/
+    .register-btn:active {
+        transform: scale(0.95);
+    }
+
+.container {
+    color: none;
+}
+
+
+.Contenedor {
+    width: 172vh;
+    height: 45vw;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 100px;
+    background-color: #FDAFAB;
+}
+.VisionYmision {
+    width:150vh;
+    height:30vw;
+    background-color:white;
+    margin-left:70px;
+    margin-top:5vh;
+    
+}
+.eslogan {
+    
+    font-style: italic;
+    margin-top:30px;
+    margin-left:70px;
+}
+.ContenedorImgTxt1 {
+    width:150vh;
+    height:15vw;
+    display:flex;
+    background-color:#D9F1F1;
+}
+.Contenedor .VisionYmision .ContenedorImgTxt1 .imagen {
+    width: 250px;
+    height: 170px;
+    margin-top: 3vh;
+    margin-left: 4vh;
+}
+img {
+    width: 250px;
+    height: 170px;
+}
+.vision {
+    width:700px;
+    height:200px;
+    /*margin-left:10%;*/
+    margin-top: 2vh;
+    margin-left:20px;
+}
+h2 {
+    color: #FDAFAB;
+    font-size: 36px;
+}
+.ContenedorImgTxt2 {
+    width: 150vh;
+    height: 20vw;
+    display: flex;
+    
+    background-color:#B6E3E9;
+    
+}
+.mision {
+    width: 400px;
+    height: 50px;
+    margin-left: 40vh;
+    margin-top:3vh;
+    color: #000000;
+   
+}
+.Contenedor .VisionYmision .ContenedorImgTxt2 .imagen2 {
+    
+    margin-top: 25px;
+    margin-left: 50px;
+
+}
+
+
+/*DISENIO RESPONSIVO*/
+@media screen and (max-width:1542px) {
+
+    .navbar .logo a {
+        margin-left: 2vw;
+    }
+
+    .navbar .links {
+        gap: 2rem;
+        margin-right: 0rem;
+    }
+}
+

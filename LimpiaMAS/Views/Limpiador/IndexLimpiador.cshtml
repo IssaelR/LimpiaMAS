@@ -1,0 +1,65 @@
+﻿
+@model IEnumerable<LimpiaMAS.Models.TbLimpiador>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/IndexACliente.css" />
+</head>
+<body>
+    <div class="tabla">
+        <section class="tabla-head">
+            <h2><a asp-action="Newlimp">Agregar Limpiador</a></h2>
+            <h3>Listado de limpiadores</h3>
+        </section>
+        <section class="tabla-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Contraseña</th>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Dirección</th>
+                        <th>Celular</th>
+                        <th>Disponibilidad</th>
+                        <th>Tarifa</th>
+                        <th>Foto</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Usr</td>
+                            <td>@item.Pwd</td>
+                            <td>@item.IdLimp</td>
+                            <td>@item.NomLimp</td>
+                            <td>@item.ApeLimp</td>
+                            <td>@item.DirLimp</td>
+                            <td>@item.TelLimp</td>
+                            <td>@item.DisLimp</td>
+                            <td>@item.TarLimp</td>
+                            <td>
+                                <!--Convert.ToBase64String de la clase System.Convert para convertir el arreglo de bytes item.FotLimp 
+                                a una cadena en formato Base64. Esto se hace para que la imagen pueda ser representada como una URL de 
+                                datos (data URI) en el atributo src de la etiqueta <img>.-->
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(item.FotLimp)" alt="Imagen">
+                            </td>
+                            <!--le pasamos el codigo del limpiador para saber cual eliminar-->
+                            <td><a asp-action="Editar" asp-route-id="@item.IdLimp">Editar</a></td>
+                            <td><a asp-action="Eliminar" asp-route-id="@item.IdLimp">Eliminar</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
+        <a asp-action="returnIndexAdmin" id="btn-return">Volver</a>
+        <a asp-controller="Servicio" asp-action="ListadoLimp_Serv" id="btn-return">PC</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿@model LimpiaMAS.Models.TbCliente
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <link rel=StyleSheet href="~/css/formTrabajador.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+</head>
+    <body>
+        <div class="navbar">
+            <div class="logo"><a asp-controller="Limpia" asp-action="Index">LIMPIAMÁS</a></div>
+            <ul class="links">
+                <li>
+                    <a asp-controller="Limpia" asp-action="Servicios">Servicios</a>
+                </li>
+                <li>
+                    <a asp-controller="Limpia" asp-action="Nosotros">Nosotros</a>
+                </li>
+                <li>
+                    <a asp-controller="Limpia" asp-action="Login">Ingresar</a>
+                </li>
+                <li>
+                    <a asp-controller="Trabajador" asp-controller="Trabajador" asp-action="FormTrabajador">Trabaja con nosotros</a>
+                </li>
+            </ul>
+            <a asp-controller="Limpia" asp-action="Register" class="register-btn">Registrate!</a>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="menu_desplegable">
+            <li>
+                <a asp-controller="Limpia" asp-action="Servicios">Servicios</a>
+            </li>
+            <li>
+                <a asp-controller="Limpia" asp-action="Nosotros">Nosotros</a>
+            </li>
+            <li>
+                <a asp-controller="Limpia" asp-action="Login">Ingresar</a>
+            </li>
+            <li>
+                <a asp-controller="Trabajador" asp-controller="Trabajador" asp-action="FormTrabajador">Trabaja con nosotros</a>
+            </li>
+            <li><a asp-controller="Limpia" asp-action="Register" class="register-btn">Registrate!</a></li>
+        </div>
+        <div class="contenedor">
+            <div class="titulo">Necesitamos los siguientes datos :)</div>
+            <div class="contenido">
+                <form asp-controller="Register" asp-action="new_cli" method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="IdCli" />
+
+                    <div class="detalles-trabajador">
+                        <!--<div class="input-box">
+                                <span class="detalles">Nombre</span>
+                                <input type="text" asp-for="NomLimp" placeholder="Ingresa tu nombre" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="detalles">Apellidos</span>
+                                <input type="text" asp-for="ApeLimp" placeholder="Ingresa tus apellidos" required>
+                        </div>-->
+                        <div class="input-box">
+                            <span class="detalles">Direccion</span>
+                            <input type="text" asp-for="DirCli" placeholder="Ingrese su domicilio" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="detalles">Numero telefonico</span>
+                            <input type="number" asp-for="TelCli" placeholder="Ingrese su numero" required>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <!--<input type="hidden" name="genLimp" id="genLimpHidden" value="" />-->
+                        <input type="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

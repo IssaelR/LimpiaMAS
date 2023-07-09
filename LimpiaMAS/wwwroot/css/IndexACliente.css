@@ -1,0 +1,115 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#c8e3e8, #fabce8);
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    padding: 1rem;
+    border-collapse: collapse;
+}
+
+.tabla {
+    background-color: ghostwhite;
+    border-radius: .8rem;
+    box-shadow: 0 .4rem .8rem #0005;
+    overflow: hidden;
+}
+
+.tabla-head {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(253, 171, 171, 0.8);
+    padding: .8rem 1rem;
+    text-align: center;
+}
+
+.tabla-body {
+    width: 95%;
+    max-height: calc(89% - .8rem);
+    background-color: rgba(211, 211, 211, 0.3);
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+
+    .tabla-body::-webkit-scrollbar {
+        width: .5rem;
+        height: .5rem;
+    }
+
+#btn-return {
+    display: inline-block;
+    margin: 10px 38vw;
+    padding: 2px 8px;
+    border: 5px solid #ed9292;
+    border-radius: 5px;
+    background-color: #ed9292;
+    color: white;
+}
+    #btn-return:hover {
+        transition: 0.5s all;
+        color: black;
+        background-color: #f85252;
+        border: 5px solid #f85252;
+    }
+/*cambiamos el estilo del scrollbar*/
+.tabla-body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+/*cuando se pasa el cursor por la tabla, aparecera el scrollbar*/
+.tabla-body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgba(182, 227, 233);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr:hover {
+    background-color: rgba(211, 211, 211, 0.8);
+}
+
+a {
+    font-weight: bold;
+    color: black;
+}
+
+    a:hover {
+        color: white;
+    }
+
+img{
+    width:100px;
+    height: 100px;
+}

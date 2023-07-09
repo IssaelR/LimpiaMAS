@@ -1,0 +1,27 @@
+﻿@model LimpiaMAS.Models.TbLimpiador
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+</head>
+<body>
+    <div class="tabla">
+    </div>
+    <form asp-controller="Limpiador" asp-action="editarLimp" method="post">
+        <input type="hidden" asp-for="IdLimp" />
+        <input type="hidden" asp-for="Usr" />
+        <input type="hidden" asp-for="Pwd" />
+        Nombre:<input type="text" asp-for="NomLimp" placeholder="Ingrese el nuevo Nombre del Limpiador" required />
+        Apellido:<input type="text" asp-for="ApeLimp" placeholder="Ingrese el nuevo Apellido del Limpiador" required />
+        Dirección:<input type="text" asp-for="DirLimp" placeholder="Ingrese la nueva dirección del Limpiador" required />
+        Celular:<input type="text" asp-for="TelLimp" placeholder="Ingresar el nuevo numero de telefono del Limpiador" required />
+        Disponibilidad:<input type="text" asp-for="DisLimp" placeholder="Ingrese el nuevo Disponibilidad" required />
+        Tarifa:<input type="number" asp-for="TarLimp" placeholder="Ingrese el nuevo Precio" required />
+        <!--Foto:<input type="file" accept="image/jpeg, image/jpg, image/png" name="FotoLimpiador" placeholder="Ingrese la nueva foto del limpiador" />-->
+        <input type="submit" value="Grabar" />
+    </form>
+</body>
+</html>

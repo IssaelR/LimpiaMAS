@@ -1,0 +1,108 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+        <LINK rel=StyleSheet href="~/css/estilosMain.css" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+        <!--<header>
+            <img src="image/xxxx" alt="LimpiaMÁS" />
+        </header>-->
+        <div class="navbar">
+            <div class="logo"><a href="#">LIMPIAMÁS</a></div>
+                <ul class="links">
+                    <li>
+                        <a asp-controller="Servicio" asp-action="Index">Servicios</a>
+                    </li>
+                    <li>
+                        <a asp-action="Nosotros">Nosotros</a>
+                    </li>
+                    <li>
+                        <a asp-action="Login">Ingresar</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Trabajador" asp-action="FormTrabajador">Trabaja con nosotros</a>
+                    </li>
+                </ul>
+                    <a asp-action="Register" class="register-btn">Registrate!</a>
+                <div class="toggle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+        </div>
+        <div class="cajita">
+            <div class="info-bar">
+                <!-- contenido de la barra de información -->
+                <ul>
+                    <li>
+                        <em>✓CALIDAD ASEGURADA</em>
+                    </li>
+                    <li>
+                        <em>✓GARANTÍA DE SATISFACCIÓN</em>
+                    </li>
+                    <li>
+                        <em>✓PRECIOS JUSTOS</em>
+                    </li>
+                    <li>
+                        <em>✓PROFESIONALISMO GARANTIZADO</em>
+                    </li>
+                </ul>
+            </div>
+            <div class="contenedor_imgtext">
+                <img src="images/ordenado.jpg" class="img-fluid" />
+                <div class="text-btn">
+                    <div class="text">
+                        <p>"Nos aseguramos de que tu entorno esté siempre limpio y agradable"</p>
+                        <a asp-action="Servicios" class="servicios-btn">Solicita tu reserva</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor_limpiaMAS">
+                <p class="header">Conviértete en un cliente "LIMPIAMÁS"</p>
+                <ul class="pasos">
+                    <li class="servicio">
+                        <img src="images/agenda.png" />
+                        <h6>1. Elige tu servicio</h6>
+                        <p>Elige tu servicio, selecciona la fecha y características del servicio que necesites.</p>
+                    </li>
+                    <li class="pago">
+                        <img src="images/tarjeta2.png" />
+                        <h6>2. Realiza tus pagos con tranquilidad</h6>
+                        <p>Nuestra plataforma de pago es segura y encriptada.</p>
+                    </li>
+                    <li class="satisfaccion">
+                        <img src="images/limpieza1.png" />
+                        <h6>3. Disfruta de tu espacio limpio y libre de gérmenes</h6>
+                        <p>Tu casa ahora está´perfectamente limpia y desinfectada.<br><b> Esperamos verte de nuevo pronto.</b></p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contenedor">
+                <div class="titulo_parrafos">
+                    <div class="titulo">
+                        <h1><u>Servicios <b>LimpiaMÁS</b></u></h1>
+                    </div>
+                    <div>
+                        <p>
+                            <br>
+                            ●Ofrecemos una variedad de servicios tanto para el colaborador como para el cliente, facilitamos el proceso en el cual el cliente encuentra una persona confiable y preparada que pueda
+                            limpiar su casa sin la necesidad de preguntar por recomendaciones a terceros, ahorrándoles tiempo a nuestros clientes.
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            ●Tambien ofrecemos a las personas que quieran formar parte de nuestro equipo, un horario flexible y sin limite de ganancias,
+                            ustedes ponen el precio debido a que los clientes serán los que tomarán el servicio, siendo estos los cuales calificarán su rendimiento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

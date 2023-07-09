@@ -1,0 +1,137 @@
+﻿body {
+    background-color: white;
+    display: block;
+    height: 52em;
+}
+
+.arriba {
+    margin: 0;
+    height: 4em;
+    width: 95em;
+    background-color: #fda09b;
+    color: white;
+    display: flex;
+}
+
+    .arriba label {
+        margin-right: 4em;
+        margin-left: 3em;
+        margin-top: 1.2em;
+        font-weight: bold;
+        font-family: 'Poppins',sans-serif;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+.Usuario_titulo {
+    display: flex;
+    width: 68em;
+    float: left;
+}
+
+    .Usuario_titulo .titulo {
+        font-family: 'Poppins',sans-serif;
+        margin-left: 3em;
+        width: 30em;
+        margin-top: 1.3em;
+        font-size: 2em;
+        background-position-y: 40em;
+    }
+
+    .Usuario_titulo i {
+        font-size: 40px;
+        margin-top: 1.5em;
+    }
+
+    .Usuario_titulo .Nombre {
+        width: 16em;
+        margin-top: 3.7em;
+        margin-left: 20px;
+        font-size: 1.2em;
+        font-family: 'Poppins',sans-serif;
+        margin-bottom: 0;
+    }
+
+.Barras {
+    display: flex;
+    width: 70em;
+    height: 10px;
+}
+
+    .Barras .barrita {
+        width: 25.3em;
+        margin-left: 4em;
+        margin-bottom: 0;
+        height: 3px;
+        background-color: #FDAFAB;
+    }
+
+    .Barras .barrarita_gris {
+        margin-left: 0;
+        background-color: #ccc;
+        width: 40.5em;
+        height: 4px;
+        background-position-y: 2em;
+    }
+
+.vertical {
+    width: 23em;
+    float: right;
+    background-color: antiquewhite;
+    margin: 0;
+}
+
+    .vertical .subtitulo {
+        height: 1em;
+        display: 20em;
+        margin-left: 2em;
+        font-size: 27px;
+    }
+
+    .vertical label {
+        margin-bottom: 20px;
+        margin-left: 1.7em;
+        margin-right: 2em;
+        font-size: 20px;
+        display: block;
+        margin-bottom: 30px;
+        font-family: 'Poppins',sans-serif;
+    }
+
+    .vertical input[type="submit"] {
+        background-color: #ccc;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-left: 30px;
+    }
+
+        .vertical input[type="submit"]:hover {
+            background-color: #4CAF50;
+        }
+
+    .vertical a {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 30px;
+        text-decoration: none;
+        color: #ccc;
+        margin-left: 50px;
+    }
+
+a {
+    color: black;
+}
+
+    a:hover {
+        color: #ff0000;
+    }
+
+.lista .list-group list-group-horizontal .list-group-item a {
+    color: red;
+    text-decoration: none;
+    background-color: black;
+}

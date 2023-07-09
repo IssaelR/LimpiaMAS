@@ -1,0 +1,118 @@
+﻿@{
+    Layout = null;
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>
+    <head>
+        <LINK rel=StyleSheet href="~/css/indexLimp.css">
+
+    </head>
+    <body>
+        <!--<header>
+            <img src="image/xxxx" alt="LimpiaMÁS" />
+        </header>-->
+        <div class="navbar">
+            <div class="logo"><a href="#">LIMPIAMÁS</a></div>
+            <ul class="links">
+                <li>
+                    <a asp-action="Servicios">Servicios</a>
+                </li>
+                <li>
+                    <a asp-controller="Usuario" asp-action="Disponibilidad">Disponibilidad</a>
+                </li>
+                <li>
+                    <a asp-action="SoporteTecnico">Soporte Tecnico</a>
+                </li>
+                <li>
+                    <a asp-action="Perfil">Perfil</a>
+                    <ul class="menu-vertical">
+                        <li>
+                            <a asp-controller="Limpiador" asp-action="Modificar">Modificar</a>
+                        </li>
+                        <li>
+                            <a asp-action="cerrarCesion">Cerrar Cesión</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="cajita">
+            <div class="info-bar">
+                <!-- contenido de la barra de información -->
+                <ul>
+                    <li>
+                        <em>✓CALIDAD ASEGURADA</em>
+                    </li>
+                    <li>
+                        <em>✓GARANTÍA DE SATISFACCIÓN</em>
+                    </li>
+                    <li>
+                        <em>✓PRECIOS JUSTOS</em>
+                    </li>
+                    <li>
+                        <em>✓PROFESIONALISMO GARANTIZADO</em>
+                    </li>
+                </ul>
+            </div>
+            <div class="contenedor_imgtext">
+                <img src="~/Img/imgPrincipal.jpg" class="img-fluid" />
+                <div class="text-btn">
+                    <div class="text">
+                        <p>"La atención al cliente se refleja en las calificaciones"</p>
+                        <p>"Una sonrisa hace el dia :)"</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor_limpiaMAS">
+                <p class="header">Conviértete en un cliente "LIMPIAMÁS"</p>
+                <ul class="pasos">
+                    <li class="servicio">
+                        <img src="~/Img/imagen2.jpg" />
+                        <h6>1. Modificar perfil</h6>
+                        <p>Poniendo tu cursor en perfil, se desplegara una barra donde aparecera la función de modificar</p>
+                    </li>
+                    <li class="pago">
+                        <img src="~/Img/imagen3.jpg" />
+                        <h6>2. Disponibilidad</h6>
+                        <p>Es importante estar al tanto de la disponibilidad que se tiene; en la barra superior podras visualizar la opción para ver tu disponibilidad.</p>
+                    </li>
+                    <li class="satisfaccion">
+                        <img src="~/Img/imagen-4.jpg" />
+                        <h6>3. Soporte Tecnico</h6>
+                        <p>En la barra superior podras dirigirte a soporte tecnico donde muy gustosos resolveremos tus dudas.</b></p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contenedor">
+                <div class="titulo_parrafos">
+                    <div class="titulo">
+                        <h1><u>Servicios <b>LimpiaMÁS</b></u></h1>
+                    </div>
+                    <div>
+                        <p>
+                            <br>
+                            ●Ofrecemos una variedad de servicios tanto para el colaborador como para el cliente, facilitamos el proceso en el cual el cliente encuentra una persona confiable y preparada que pueda
+                            limpiar su casa sin la necesidad de preguntar por recomendaciones a terceros, ahorrándoles tiempo a nuestros clientes.
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            ●Tambien ofrecemos a las personas que quieran formar parte de nuestro equipo, un horario flexible y sin limite de ganancias,
+                            ustedes ponen el precio debido a que los clientes serán los que tomarán el servicio, siendo estos los cuales calificarán su rendimiento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

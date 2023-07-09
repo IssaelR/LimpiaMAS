@@ -1,0 +1,54 @@
+﻿@model IEnumerable<LimpiaMAS.Models.TbCliente>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/IndexACliente.css" />
+</head>
+<body>
+    <div class="tabla">
+        <section class="tabla-head">
+            <h2><a asp-action="Nuevo">Agregar cliente</a></h2>
+            <h3>Listado de clientes</h3>
+        </section>
+        <section class="tabla-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Dirección</th>
+                        <th>Celular</th>
+                        <th>Usuario</th>
+                        <th>Contraseña</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.IdCli</td>
+                            <td>@item.NomCli</td>
+                            <td>@item.ApeCli</td>
+                            <td>@item.DirCli</td>
+                            <td>@item.TelCli</td>
+                            <td>@item.Usr</td>
+                            <td>@item.Pwd</td>
+                            <!--le pasamos el codigo del distrito para saber cual eliminar-->                            
+                            <td><a asp-action="Editar" asp-route-id="@item.IdCli">Editar</a></td>
+                            <td><a asp-action="Eliminar" asp-route-id="@item.IdCli">Eliminar</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
+        <a asp-action="returnIndexAdmin" id="btn-return">Volver</a>
+    </div>
+</body>
+</html>

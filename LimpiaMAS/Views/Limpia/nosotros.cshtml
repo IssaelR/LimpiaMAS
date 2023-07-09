@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/Nosotros.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><a asp-action="Index">LIMPIAMÁS</a></div>
+        <ul class="links">
+            <li>
+                <a asp-action="Servicios">Servicios</a>
+            </li>
+            <li>
+                <a asp-action="Nosotros">Nosotros</a>
+            </li>
+            <li>
+                <a asp-action="Login">Ingresar</a>
+            </li>
+            <li>
+                <a asp-controller="Trabajador" asp-action="FormTrabajador">Trabaja con nosotros</a>
+            </li>
+        </ul>
+        <a asp-action="Register" class="register-btn">Registrate!</a>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div class="Contenedor">
+        <div class="eslogan">
+            <p>Limpieza efectiva y sin riesgos, LimpiaMÁS, la más confiable.</p>
+        </div>
+        <div class="VisionYmision">
+            <div class="ContenedorImgTxt1">
+                <div class="imagen">
+                    <img src="images/casaLimpia.jpg"     />
+                </div>
+                <div class="vision">
+                    <h2><u>Visión</u></h2>
+                    <p>
+                        Nuestra visión es ofercer un servicio <b> accesible</b> y <b>confiable</b> de limpieza de hogares, y hacerlo a travéz de una pagina web segura para los clientes,
+                        trabajadoras y trabajadores del hogar; construyendo una pagina que marque la diferencia en la vida de las personas.
+                    </p>
+                </div>
+            </div>
+            <div class="ContenedorImgTxt2">
+                <div class="mision">
+                    <h2><u>Misión</u></h2>
+                    <p>Nuestra misión es hacer que el habito de la limpieza sea <b>accesible, eficaz y seguro</b> todos los hogares de Lima.</p>
+                </div>
+                <div class="imagen2">
+                    <img src="~/images/imagenNosotros2.0.jpg" />
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</body>
+</html>

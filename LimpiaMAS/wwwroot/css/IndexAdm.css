@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body{
+    height:100%;
+    width:90%;
+    margin-left:5vw;/*xd*/
+    background-color:white;
+    font-family: 'Poppins',sans-serif;
+
+}
+
+header,main{
+    display: block;
+    margin: 0;
+}
+
+.encabezado{
+    background-color: #B6E3E9;
+    text-align: center;
+    font-size: calc(1.6rem + 1.5vw);
+    font-weight: bold;
+}
+
+.navbar .links{
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+    a:hover {
+        color: white;
+    }
+
+.navbar {
+    position: sticky;
+    margin-top:2.5vh;
+    height: 8vh; /*"viewport height" (altura de la ventana gráfica)*/
+    padding:0 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #FDAFAB;
+}
+
+    .navbar .logo a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: black;
+        margin:auto;
+        transition: all 0.2s ease-in-out;
+    }
+
+        .navbar .logo a:hover {
+            transform: scale(1.05);
+            color: white;
+        }
+    .navbar .links {
+        font-size: calc(0.4rem + 0.6vw);
+        display: flex;
+        gap: 2.5vw;
+        cursor:pointer;
+        margin-top:2vh;
+        /*margin-left: 6vw; "viewport width" (ancho de la ventana gráfica)*/
+    }
+
+    .navbar .toggle-btn {
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display:none;
+    }
+
+
+.register-btn {
+    background-color: #B6E3E9;
+    color: black;
+    padding: 0.5rem 1rem;
+    margin-top:-0.1vw;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: calc(0.6rem + 0.6vw);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+    /*hover, aplicar estilos a un elemento cuando el cursor esta sobre el*/
+    .register-btn:hover {
+        transform: scale(1.05);
+        color: #ffffff;
+    }
+    /*active, aplica estilos a un elemento cuando se clickea estem mismo*/
+    .register-btn:active {
+        transform: scale(0.95);
+    }
+
+.contenedor-lista{
+    margin-top:1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+    background-color: #FDAFAB;
+   /*height: 75vh; esto por si queremos que se agregue un scrollbar al contenedor*/
+    width: 100%;
+}
+
+.contenedor-lista .tarjeta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 2.5em;
+    padding: 2em;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.contenedor-lista .tarjeta img {
+    width: 30%;
+    border-radius: 5px;
+  }
+
+.contenedor-lista a{
+    color: black;
+}
+
+.contenedor-lista a:hover{
+    font-weight: bold;
+}
+
+footer{
+    font-weight: bold;
+    margin-top: 2.5vh;
+    text-align: center;
+    font-size: calc(0.6em + 0.8vw);
+    background-color: #B6E3E9;
+}

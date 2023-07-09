@@ -1,0 +1,21 @@
+﻿@model LimpiaMAS.Models.TbLimpiador
+@using System.Text.Json
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head></head>
+    <body>
+        <input type="hidden" asp-for="IdLimp" />
+        <input type="hidden" asp-for="Usr" />
+        <input type="hidden" asp-for="Pwd" />
+        Nombre:
+        <input type="text" asp-for="NomLimp" placeholder="Ingrese el nuevo Nombre del Limpiador" required />
+        Apellido:
+        <input type="text" asp-for="ApeLimp" placeholder="Ingrese el nuevo Apellido del Limpiador" required />
+        Servicio:
+        <input type="text" asp-for="ServLimp" placeholder="Ingrese la nueva dirección del Limpiador" required />
+    </body>
+</html>

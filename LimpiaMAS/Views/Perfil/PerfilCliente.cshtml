@@ -1,0 +1,58 @@
+﻿@model LimpiaMAS.Models.TbCliente
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+    <!--<link rel=StyleSheet href="~/css/estilosMain.css" media="screen">-->
+        <link rel="stylesheet" href="~/css/stylesPerfil.css"/>
+        <script src="https://kit.fontawesome.com/8fd1691e06.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <!--        <div class="navbar">
+        <div class="logo"><a href="#">LIMPIAMÁS</a></div>
+        <ul class="links">
+            <li>
+                <a asp-controller="Servicio" asp-action="Index">Servicios</a>
+            </li>
+            <li>
+                <a asp-action="Nosotros">Nosotros</a>
+            </li>
+            <li>
+                <a asp-action="Login">Ingresar</a>
+            </li>
+            <li>
+                <a asp-controller="Perfil" asp-action="PerfilCliente">Perfil Cliente</a>
+            </li>
+            <li>
+                <a asp-controller="Perfil" asp-action="PerfilLimpiador">Perfil Limpiador</a>
+            </li>
+            <li>
+                <a asp-controller="Trabajador" asp-action="FormTrabajador">Trabaja con nosotros</a>
+            </li>
+        </ul>
+        <a asp-controller="Usuario" asp-action="LogOut" class="register-btn">Cerrar Sesión</a>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>-->
+        
+        <main>
+            <aside>
+                <div class="asideDesign">
+                    <i class="fa-solid fa-user"></i>
+                    <h6>Usuario</h6>
+                    <p>@ViewData["Usr"]</p>
+                </div>
+            </aside>
+            <section>
+                <h1>Nombre y Apellido: @ViewData["NomApe"]</h1>
+                <h1>Diección: @ViewData["Dir"]</h1>
+                <h1>Telefeno: @ViewData["Tel"]</h1>
+            </section>
+            <a asp-action="returnIndexUsr" id="btn-return">Volver</a>
+        </main>
+    </body>
+</html>

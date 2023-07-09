@@ -1,0 +1,83 @@
+﻿@model LimpiaMAS.Models.TbServicio
+
+@{
+    Layout = null;
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <title>LimpiaMAS</title>
+    <link rel="stylesheet" href="~/css/estilosCarrito.css" />
+    <script src="https://kit.fontawesome.com/1ba4eac34d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <label class="arriba">
+        <label>LIMPIA MÁS LA MÁS CONFIABLE </label>
+        <label>LIMPIA MÁS LA MÁS CONFIABLE </label>
+        <label>LIMPIA MÁS LA MÁS CONFIABLE </label>
+        <label>LIMPIA MÁS LA MÁS CONFIABLE </label>
+
+    </label>
+
+    <div class="Usuario_titulo">
+        <i class="fa-solid fa-cart-shopping-fast"></i>
+        <h2 class="titulo">Finalizar Reserva </h2>
+        <i class="fa-regular fa-user"></i>
+        <label class="Nombre">@ViewBag.NombreApellidoLimpiador</label>
+
+    </div>
+
+
+    <div class="Barras">
+        <label class="barrita"> </label>
+        <label class="barrarita_gris"></label>
+
+    </div>
+    <div class=" vertical" asp-action="Carrito_grabado" method="post">
+        <form asp-action="Carrito_grabado" method="post">
+            <input type="hidden" name="nomApeLimp" value="@ViewBag.NombreApellidoLimpiador" />
+            <input type="hidden" name="nomApeCli" value="@ViewBag.NombreApellidoCliente" />
+            <input type="hidden" asp-for="Guidserv" value="@ViewBag.GUID" />
+            <input type="hidden" asp-for="CatServ" value="@ViewBag.CategoriaServicio" />
+            <input type="hidden" asp-for="PreServ" value="@ViewBag.Tarifa" />
+            <input type="hidden" name="dirCli" value="@ViewBag.DireccionCliente" />
+            <input type="hidden" asp-for="IdLimp" value="@ViewBag.idLimp" />
+            <input type="hidden" asp-for="FecServ" value="@ViewBag.FechaServicio" />
+            <input type="hidden" asp-for="IdCli" value="@ViewBag.IdCli" />
+            <h3 class="subtitulo" style="font-size: 28px;">RESUMEN DE RESERVA </h3>
+            <!--<label>Id: @ViewBag.IdCLi</label>-->
+            <label><b>Nombre y Apellido del limpiador:</b><br> @ViewBag.NombreApellidoLimpiador</label>
+            <label><b>Nombre y Apellido del cliente:</b><br> @ViewBag.NombreApellidoCliente</label>
+            <label><b>Direccion del servicio:</b><br> @ViewBag.DireccionCliente</label>
+            <label><b>Categoria del servicio:</b><br> @ViewBag.CategoriaServicio</label>
+            <label><b>Fecha del servicio:</b><br> @ViewBag.FechaServicio.ToString("dd/MM/yyyy")</label>
+            <input name="area" placeholder="Ingrese el area en m^2 del lugar a limpiar" required style="font-size: 28px" />
+            <label><b>Ingrese la hora para el servicio:</b><br> </label>
+            <select asp-for="HoraServ">
+                @foreach (var opcion in ViewBag.OpcionesTiempo)
+                {
+                    <option>@opcion</option>
+                }
+            </select>
+            <input type="submit" value="Reservar" readonly />
+            <a asp-action="Index">Regresar</a>
+        </form>
+    </div>
+    <div class="final">
+
+        <label class="superior"> Revisar y Realizar la Reserva</label>
+        <div class="caja">
+            <label><br /> Verifica tu información y haz click en Reservar</label>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

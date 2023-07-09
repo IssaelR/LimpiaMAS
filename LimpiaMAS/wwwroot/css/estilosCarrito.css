@@ -1,0 +1,175 @@
+﻿body {
+    background-color: white;
+    display: block;
+    height: 52em;
+}
+
+.arriba {
+    margin: 0;
+    height: 4em;
+    width: 95em;
+    background-color: #fda09b;
+    color: white;
+    display: flex;
+    margin-left: 4vw;
+}
+
+    .arriba label {
+        margin-right: 4em;
+        margin-left: 3em;
+        margin-top: 1.2em;
+        font-weight: bold;
+        font-family: 'Poppins',sans-serif;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+.Usuario_titulo {
+    display: flex;
+    width: 68em;
+    float: left;
+}
+
+    .Usuario_titulo .titulo {
+        font-family: 'Poppins',sans-serif;
+        margin-left: 3em;
+        width: 30em;
+        margin-top: 1.3em;
+        font-size: 2em;
+        background-position-y: 40em;
+    }
+
+    .Usuario_titulo i {
+        font-size: 40px;
+        margin-top: 1.5em;
+    }
+
+    .Usuario_titulo .Nombre {
+        width: 16em;
+        margin-top: 3.7em;
+        margin-left: 20px;
+        font-size: 1.2em;
+        font-family: 'Poppins',sans-serif;
+        margin-bottom: 0;
+    }
+
+.Barras {
+    display: flex;
+    width: 70em;
+    height: 10px;
+}
+
+    .Barras .barrita {
+        width: 25.3em;
+        margin-left: 4em;
+        margin-bottom: 0;
+        height: 3px;
+        background-color: #FDAFAB;
+    }
+
+    .Barras .barrarita_gris {
+        margin-left: 0;
+        background-color: #ccc;
+        width: 34.5em;
+        height: 4px;
+        background-position-y: 2em;
+    }
+
+.vertical {
+    width: 30.3em;
+    float: right;
+    background-color: antiquewhite;
+    margin: 0;
+    position: sticky;
+}
+
+    .vertical .subtitulo {
+        height: 1em;
+        display: 20em;
+        margin-left: 2em;
+    }
+
+    .vertical label {
+        margin-bottom: 20px;
+        margin-left: 1.7em;
+        font-size: 20px;
+        display: block;
+        margin-bottom: 30px;
+        font-family: 'Poppins',sans-serif;
+    }
+
+input {
+    margin-left: 2em;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+
+    /*label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;} */
+
+
+    input[type="text"],
+    select {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-left: 2em;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        background-color: #ccc;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #4CAF50;
+        }
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #ccc;
+    margin-left: 50px;
+}
+
+    a:hover {
+        color: #ff0000;
+    }
+
+.final {
+    display: grid;
+}
+
+    .final .superior {
+        margin-left: 4em;
+        font-size: 25px;
+    }
+
+    .final .caja {
+        margin-top: 2em;
+        margin-left: 4em;
+        width: 56.8em;
+        background-color: #e9e5e5;
+        height: 5em;
+        justify-content: center;
+    }
+
+        .final .caja label {
+            margin-left: 6em;
+            margin-top: 2em;
+            font-size: 20px;
+        }

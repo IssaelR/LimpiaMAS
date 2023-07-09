@@ -1,0 +1,22 @@
+﻿@model LimpiaMAS.Models.TbCliente
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+</head>
+<body>
+    <form asp-controller="Cliente" asp-action="grabar" method="post">
+        <input type="hidden" asp-for="IdCli" required />
+        Nombre:<input type="text" asp-for="NomCli" placeholder="Ingrese el nombre del Cliente" required />
+        Apellido:<input type="text" asp-for="ApeCli" placeholder="Ingrese el apellido del Cliente" required />
+        Dirección:<input type="text" asp-for="DirCli" placeholder="Ingrese la dirección del Cliente" required />
+        Celular:<input type="text" asp-for="TelCli" placeholder="Ingresar el número de celular del Cliente" required />
+        Usuario:<input type="text" asp-for="Usr" placeholder="Ingrese el usuario del Cliente" required />
+        Contraseña:<input type="text" asp-for="Pwd" placeholder="Ingrese la contraseña del Cliente" required />
+        <input type="submit" value="Grabar" />
+    </form>
+</body>
+</html>

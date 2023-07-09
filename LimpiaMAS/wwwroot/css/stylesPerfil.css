@@ -1,0 +1,32 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+aside{
+    float: left;
+    background-color: blue;
+    width: 30%;
+    padding: 30px 10px;
+}
+section{
+    float: right;
+    width: 70%;
+    padding: 10px 30px;
+}
+i {
+    font-size: 100px;
+}
+.asideDesign
+{
+    text-align: center;
+    color: white;
+}
+.asideDesign h6 {
+    font-size: 2rem;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+.asideDesign p {
+    font-size: 2.2em;
+}

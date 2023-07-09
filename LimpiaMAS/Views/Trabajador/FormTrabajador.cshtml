@@ -1,0 +1,177 @@
+﻿@model LimpiaMAS.Models.TbLimpiador
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+       <link rel=StyleSheet href="~/css/formTrabajador.css" media="screen">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo"><a asp-controller="Limpia" asp-action="Index">LIMPIAMÁS</a></div>
+            <ul class="links">
+                <li>
+                    <a asp-controller="Limpia" asp-action="Servicios">Servicios</a>
+                </li>
+                <li>
+                    <a asp-controller="Limpia" asp-action="Nosotros">Nosotros</a>
+                </li>
+                <li>
+                    <a asp-controller="Limpia" asp-action="Login">Ingresar</a>
+                </li>
+                <li>
+                    <a asp-controller="Trabajador" asp-controller="Trabajador" asp-action="FormTrabajador">Trabaja con nosotros</a>
+                </li>
+            </ul>
+            <a asp-controller="Limpia" asp-action="Register" class="register-btn">Registrate!</a>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="menu_desplegable">
+            <li>
+                <a asp-controller="Limpia" asp-action="Servicios">Servicios</a>
+            </li>
+            <li>
+                <a asp-controller="Limpia" asp-action="Nosotros">Nosotros</a>
+            </li>
+            <li>
+                <a asp-controller="Limpia" asp-action="Login">Ingresar</a>
+            </li>
+            <li>
+                <a asp-controller="Trabajador" asp-controller="Trabajador" asp-action="FormTrabajador">Trabaja con nosotros</a>
+            </li>
+            <li><a asp-controller="Limpia" asp-action="Register" class="register-btn">Registrate!</a></li>
+        </div>
+        <div class="contenedor">
+            <div class="titulo">Formulario de trabajadores</div>
+            <div class="contenido">
+                <form asp-controller="Register" asp-action="new_limp" method="post" enctype="multipart/form-data">
+                <input type="hidden" asp-for="IdLimp" />
+                    <div class="detalles-trabajador">
+                        <!--<div class="input-box">
+                            <span class="detalles">Nombre</span>
+                            <input type="text" asp-for="NomLimp" placeholder="Ingresa tu nombre" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="detalles">Apellidos</span>
+                            <input type="text" asp-for="ApeLimp" placeholder="Ingresa tus apellidos" required>
+                    </div>-->
+                        <div class="input-box">
+                            <span class="detalles">Direccion</span>
+                            <input type="text" asp-for="DirLimp" placeholder="Ingrese su domicilio" required>
+                        </div>
+                        <div class="input-box">
+                            <section class="combo-box">
+                                <span class="detalles">Distrito</span>
+                            <select asp-for=DistrLimp style="height: 40px; border-radius: 5px;">
+                                        <option value="Ancon" id="ancon">Ancon</option>
+                                        <option value="Ate-Vitarte" id="ate-vitarte">Ate Vitarte</option>
+                                        <option value="Barranco" id="barranco">Barranco</option>
+                                        <option value="Breña" id="breña">Breña</option>
+                                        <option value="Carabayllo" id="barranco">Carabayllo</option>
+                                        <option value="Chaclacayo" id="chaclacayo">Chaclacayo</option>
+                                        <option value="Chorrillos" id="chorrillos">Chorrillos</option>
+                                        <option value="Cieneguilla" id="cieneguilla">Cieneguilla</option>
+                                        <option value="Comas" id="comas">Comas</option>
+                                        <option value="El-Agustino" id="el-agustino">El Agustino</option>
+                                        <option value="Independencia" id="independencia">Independencia</option>
+                                        <option value="Jesus-Maria" id="el-agustino">Jesus Maria</option>
+                                        <option value="La-Molina" id="la-molina">La Molina</option>
+                                        <option value="La-Victoria" id="la-victoria">La Victoria</option>
+                                        <option value="Jesus-Maria" id="el-agustino">Jesus Maria</option>
+                                        <option value="Lima" id="lima">Centro de Lima</option>
+                                        <option value="Lince" id="lince">Lince</option>
+                                        <option value="Los-Olivos" id="los-olivos">Los Olivos</option>
+                                        <option value="SJL" id="sjl">San Juan de Lurigancho</option>
+                                        <option value="Lurin" id="lurin">Lurin</option>
+                                        <option value="Magdalena" id="magdalena">Madgalena</option>
+                                        <option value="Miraflores" id="miraflores">Miraflores</option>
+                                        <option value="Pachacamac" id="pachacamac">Pachacamac</option>
+                                        <option value="Pucusana" id="pucusana">Pachacamac</option>
+                                        <option value="Pueblo-Libre" id="pueblo-libre">Pueblo Libre</option>
+                                        <option value="Punta-Hermosa" id="punta-hermosa">Punta Hermosa</option>
+                                        <option value="Punta-Negra" id="punta-negra">Punta Negra</option>
+                                        <option value="Rimac" id="rimac">Rimac</option>
+                                        <option value="San-Bartolo" id="san-bartolo">San Bartolo</option>
+                                        <option value="San-Borja" id="san-borja">San Borja</option>
+                                        <option value="San-Isidro" id="san-isidro">San Isidro</option>
+                                        <option value="SJM" id="sjm">San Juan de Miraflores</option>
+                                        <option value="San-Luis" id="san-luis">San Luis</option>
+                                        <option value="SMP" id="smp">San Martin de Porres</option>
+                                        <option value="San-Miguel" id="san-miguel">San Miguel</option>
+                                        <option value="Santa-Anita" id="santa-anita">Santa Anita</option>
+                                        <option value="Santa-Maria" id="santa-maria">Santa Maria del Mar</option>
+                                        <option value="Surco" id="surco">Santiago de Surco</option>
+                                        <option value="Surquillo" id="surquillo">Surquillo</option>
+                                        <option value="Villa-El-Salvador" id="villa-el-salvador">Villa El Salvador</option>
+                                        <option value="VMT" id="vmt">Villa Maria del Triunfo</option>
+                                    </select>
+                            </section>
+                        </div>
+                        <div class="input-box">
+                            <span class="detalles">Numero telefonico</span>
+                            <input type="number" asp-for="TelLimp" placeholder="Ingrese su numero" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="detalles">Tarifa x m^2</span>
+                            <input type="text" asp-for="TarLimp" placeholder="Ingrese su tarifa por metro cuadrado" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="detalles">Disponibilidad</span>
+                            <textarea type="text" asp-for="DisLimp" placeholder="Ingrese su disponibilidad horaria" required></textarea>
+                        </div>
+                        <div class="input-box">
+                            <span class="detalles">Experiencia</span>
+                            <textarea type="text"  placeholder="Ingrese su experiencia en el ámbito" required></textarea>
+                        </div>
+                        <div class="input-box">
+                            <span class="detalles">Foto carnet</span>
+                        <input type="file" accept="image/jpeg, image/jpg, image/png" name="FotoLimpiador" placeholder="Ingrese la nueva foto del limpiador" required />
+                        </div>
+                        <div class="input-box">
+                            <section class="combo-box">
+                            <span class="detalles" style="display: flex; align-items: center;">Servicios a ofrecer<em>(si son varios apriete Ctrl y seleccione)</em></span>
+                            <select asp-for="ServiciosAJSON" style="width:80px; overflow: hidden; border-radius: 5px;">
+                                    <option value="baño">Baño</option>
+                                    <option value="cocina">Cocina</option>
+                                    <option value="sala">Sala</option>
+                                    <option value="patio">Patio</option>
+                                </select>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="detalles-genero">
+                    <input type="radio" name="genero" id="pto-1" value="hombre">
+                    <input type="radio" name="genero" id="pto-2" value="mujer">
+                    <input type="radio" name="genero" id="pto-3" value="ns">
+                        <span class="titulo-genero">Género</span>
+                        <div class="categoria">
+                            <label for="pto-1">
+                            <span class="pto uno"></span>
+                                <span class="genero">Hombre</span>
+                            </label>
+                            <label for="pto-2">
+                            <span class="pto dos"></span>
+                                <span class="genero">Mujer</span>
+                            </label>
+                            <label for="pto-3">
+                            <span class="pto tres"></span>
+                                <span class="genero">Prefiero no decirlo</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="button">
+                    <!--<input type="hidden" name="genLimp" id="genLimpHidden" value="" />-->
+                    <input type="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

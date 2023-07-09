@@ -1,0 +1,28 @@
+﻿@model LimpiaMAS.Models.TbUser
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/login.css" />
+    </head>
+    <body>
+        <main class="container-fluid">
+            <form asp-controller="Login" asp-action="Logeo" method="post">
+                <h2 class="title">Login</h2>
+                <div class="container">
+                    <label class="label">Usuario:</label>
+                    <input type="text" asp-for="Usr" id="usr" placeholder="Ingresar Usuario" />
+                    <label class="label">Contraseña:</label>
+                    <input type="password" asp-for="Pwd" id="pwd" placeholder="Ingresar Contraseña" />
+                </div>
+
+                <input type="submit" value="INGRESAR" />
+                <p>¿No tiene una cuenta? <a asp-action="Register">Registrate</a></p>
+                <p>Regresar a la <a asp-action="Index">Página principal</a> </p>
+            </form>
+        </main>
+    </body>
+</html>

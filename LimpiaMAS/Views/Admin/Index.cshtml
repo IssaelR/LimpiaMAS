@@ -1,0 +1,48 @@
+﻿@model LimpiaMAS.Models.TbAdmin
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/IndexAdm.css">
+</head>
+    <body>
+        <header class="encabezado">
+            <p>Bienvenido administrador</p>
+        </header>
+        <div class="navbar">
+        <div class="logo"><a asp-action="Index">LIMPIAMÁS</a></div>
+            <a asp-controller="Admin" asp-action="LogOut" class="register-btn">Cerrar Sesion</a>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <main class="contenedor-lista">
+            <div class="tarjeta">
+                <img src="~/images/user-icon-vector-cropped.png" alt="Imagen 1">
+                <h3>Usuarios</h3>
+                <a asp-controller="User" asp-action="IndexUser">Mantenimiento de usuarios</a>
+            </div>
+            <div class="tarjeta">
+                <img src="/images/limpiador-cropped.png" alt="Imagen 2">
+                <h3>Limpiadores</h3>
+                <a asp-controller="Limpiador" asp-action="IndexLimpiador">Mantenimiento de limpiadores</a>
+            </div>
+            <div class="tarjeta">
+                <img src="~/images/cliente-cropped.png" alt="Imagen 3">
+                <h3>Clientes</h3>
+                <a asp-controller="Cliente" asp-action="IndexCliente">Mantenimiento de clientes</a>
+            </div>
+            <!--<div class="tarjeta">
+                <img src="/images/categorias-cropped.png" alt="Imagen 3">
+                <h3>Categorias de servicios</h3>
+            <a asp-controller="Servicios" asp-action="Index">Mantenimiento de categorias</a>
+            </div>-->
+        </main>
+        <footer class="pie">
+            <p>LIMPIAMÁS <i>derechos registrados 2023</i> - LIMPIAMÁS <i>derechos registrados 2023</i> - LIMPIAMÁS <i>derechos registrados 2023</i></p>
+        </footer>
+    </body>
+</html>

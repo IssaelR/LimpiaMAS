@@ -1,0 +1,337 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    margin: 0;
+    margin-right: 300px;
+    height: 1200px;
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar .links {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+    a:hover {
+        color: white;
+    }
+
+/*HEADER*/
+header {
+    position: relative;
+    padding: 0;
+    color: black;
+}
+
+/*NAVBAR*/
+.navbar {
+    margin-left: 6vw;
+    position: sticky;
+    width: 84vw;
+    height: 8vh; /*"viewport height" (altura de la ventana gráfica)*/
+    padding: 0 4em;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #FDAFAB;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /*background-image: linear-gradient(90deg, rgba(137, 235, 202, 0.5) 30%, rgba(122, 139, 239, 0.5));*/
+}
+
+    .navbar .logo a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: black;
+        margin: auto;
+        transition: all 0.2s ease-in-out;
+    }
+
+        .navbar .logo a:hover {
+            transform: scale(1.05);
+            color: white;
+        }
+
+    .navbar .links {
+        font-size: calc(0.4rem + 0.6vw);
+        display: flex;
+        gap: 2.5vw;
+        height: 8px;
+        /*margin-left: 6vw; "viewport width" (ancho de la ventana gráfica)*/
+    }
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.links li:hover .menu-vertical {
+    display: block;
+    position: relative;
+}
+
+.menu-vertical li:hover {
+    background-color: black;
+}
+
+.menu-vertical li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
+}
+
+
+.cajita {
+    margin-top: 13vh;
+}
+/*INFOBAR*/
+.info-bar {
+    margin: auto;
+    position: sticky;
+    width: 95vw; /*"viewport width" (ancho de la ventana gráfica).*/
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    background-color: white;
+}
+
+
+    .info-bar li {
+        padding: 0% 0;
+        margin-top: 1.5vh;
+        margin-left: 9vw;
+        display: inline-block;
+        font-size: calc(0.25rem + 0.6vw);
+    }
+
+.contenedor_imgtext {
+    margin-left: 6vw;
+    width: 100vw;
+}
+
+    .contenedor_imgtext .imagen {
+        max-width: 100%; /*auto?*/
+        height: 768px; /*auto?*/
+        object-fit: cover;
+        /*background-image: url("../images/ordenado.jpg");*/
+        background-repeat: no-repeat;
+    }
+
+    .contenedor_imgtext .text-btn {
+        width: 42rem; /*auto*/
+        height: 26rem; /* 48rem 79vh*/
+        position: absolute;
+        top: 12vh;
+        margin-top: 100px;
+        margin-left: 39rem; /*margin-right:8.5vw*/
+        margin-right: 8.5vw;
+        /*font-size: 3rem;*/
+        font-weight: bold;
+        display: flex;
+        background-color: rgba(253,175,171, 0.6);
+    }
+
+
+        .contenedor_imgtext .text-btn .text {
+            width: 40rem; /*auto*/
+            height: 25rem; /*79vh*/
+            position: relative;
+            /*margin-right:8.5vw*/
+            margin-top: 100px;
+            padding: 1rem;
+            font-size: 16px;
+            font-size: calc(0.5rem + 1vw);
+            font-weight: bold;
+            line-height: 8rem;
+            text-align: center;
+        }
+
+            .contenedor_imgtext .text-btn .text .servicios-btn {
+                position: relative;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+                border: none;
+                outline: none;
+                border-radius: 30px;
+                font-size: 2rem;
+                font-weight: bold;
+                cursor: pointer;
+                background-color: black;
+                color: black;
+                transition: all 0.2s ease-in-out;
+            }
+
+                .contenedor_imgtext .text-btn .text .servicios-btn:hover {
+                    transform: scale(0.95);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+                    color: #ffffff;
+                }
+
+                .contenedor_imgtext .text-btn .text .servicios-btn:active {
+                    transform: scale(0.95);
+                }
+
+.contenedor_limpiaMAS .pasos {
+    list-style: none;
+    display: grid;
+    position: relative;
+}
+
+.contenedor_limpiaMAS {
+    width: 84vw;
+    height: 46vh;
+    margin-left: 6vw;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+    .contenedor_limpiaMAS .header {
+        padding-top: 1.5rem;
+        font-size: 2.2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .contenedor_limpiaMAS .pasos .servicio {
+        position: absolute;
+        margin-left: 5rem; /*movemos la caja a la derecha de la caja mas grande*/
+        padding-right: 1rem; /*con padding-right le estamos dando un marco derecho a la caja*/
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+        width: 24vw;
+        height: 32vh;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+        .contenedor_limpiaMAS .pasos .servicio img {
+            padding-bottom: 1rem;
+            margin-left: 11rem;
+            width: 20%;
+        }
+
+        .contenedor_limpiaMAS .pasos .servicio h6 {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #F5727B;
+        }
+
+        .contenedor_limpiaMAS .pasos .servicio p {
+            padding-top: 1rem;
+            padding-left: 1rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+    .contenedor_limpiaMAS .pasos .pago {
+        position: absolute;
+        margin-left: 34rem; /*movemos la caja a la derecha de la caja mas grande*/
+        padding-right: 1rem; /*con padding-right le estamos dando un marco derecho a la caja*/
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+        width: 24vw;
+        height: 32vh;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+        .contenedor_limpiaMAS .pasos .pago h6 {
+            padding-left: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #F5727B;
+        }
+
+        .contenedor_limpiaMAS .pasos .pago img {
+            margin-left: 11rem;
+            width: 20%;
+            padding-bottom: 1rem;
+        }
+
+        .contenedor_limpiaMAS .pasos .pago p {
+            padding-left: 1rem;
+            padding-top: 1rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+    .contenedor_limpiaMAS .pasos .satisfaccion {
+        position: absolute;
+        margin-left: 67rem; /*movemos la caja a la derecha de la caja mas grande*/
+        padding-right: 1rem; /*con padding-right le estamos dando un marco derecho a la caja*/
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        width: 24vw;
+        height: 32vh;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+        .contenedor_limpiaMAS .pasos .satisfaccion h6 {
+            padding-left: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #F5727B;
+        }
+
+        .contenedor_limpiaMAS .pasos .satisfaccion img {
+            margin-left: 11rem;
+            width: 20%;
+            padding-bottom: 0.5rem;
+        }
+
+        .contenedor_limpiaMAS .pasos .satisfaccion p {
+            padding-left: 1rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+/*DESCRIPCION SERVICIOS*/
+.contenedor {
+    margin-left: 6vw;
+}
+
+    .contenedor .titulo_parrafos {
+        background-color: #FDAFAB;
+        /*background-image: linear-gradient(90deg, rgba(122, 139, 239, 0.5), rgba(137, 235, 202, 0.5) 90%);*/
+        /*background-image: linear-gradient(45deg, rgba(122, 139, 239, 0.4) 50%, rgba(156, 241, 152,0.3) 40%);*/
+        position: sticky;
+        width: 84vw;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .contenedor .titulo {
+        text-align: center;
+        text-transform: uppercase;
+        color: black;
+    }

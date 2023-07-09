@@ -1,0 +1,31 @@
+﻿@model IEnumerable<LimpiaMAS.Models.TbLimpiador>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head></head>
+    <body>
+        <h1>LIMPIADORES</h1>
+        <h2>Seleecione el limpiador para ver sus servicios</h2>
+        <table class="table">
+            <thead>Nombre y Apellido Limpiador</thead>
+            <thead>Funcion</thead>
+                @foreach (var item in Model)
+                {
+                    
+                        <tr>
+                            <td>@item.NomLimp @item.ApeLimp</td>
+                            <td><a asp-action="VerServicios" asp-route-id="@item.NomLimp">Ver sus Servicios</a></td>
+                        </tr>
+
+
+                    
+                    
+                }
+        </table>
+            
+        
+</body>
+</html>

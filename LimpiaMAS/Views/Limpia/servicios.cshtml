@@ -1,0 +1,111 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content=" IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/Servicios.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contrata limpieza</title>
+</head>
+<body>
+    <header>
+        <h1>Nuestros servicios de limpieza</h1>
+    </header>
+    <section class="contenedor">
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Limpieza Hogar</span>
+				<img src="~/images/Servicio1.jpg" alt="" class="img-item">
+                <span class="precio-item">$290</span>
+                <a asp-action="Index" asp-controller="Servicio">Seleccionar servicio</a>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Limpieza Empresa</span>
+                <img src="~/images/servicio2.jpg" alt="" class="img-item">
+                <span class="precio-item">$790</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Servicio Mudanza</span>
+                <img src="~/images/servicio3.jpg" alt="" class="img-item">
+                <span class="precio-item">$390</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+        </div>
+
+
+        <div class="carrito">
+            <div class="header-carrito">
+                <h2>Tu carrito</h2>
+            </div>
+            <div class="carrito-items">
+                <div class="carrito-item">
+                    <img src="~/images/Servicio1.jpg" alt="" width="80px">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Limpieza hogar</span>
+                        <div class="selector.cantidad">
+                            <i class=" fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$290</span>
+                    </div>
+                    <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="~/images/servicio2.jpg" alt="" width="80px">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Limpieza Empresa</span>
+                        <div class="selector.cantidad">
+                            <i class=" fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$790</span>
+                    </div>
+                    <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                </div>
+                <div class="carrito-item">
+					<img src="~/images/servicio3.jpg" alt="" width="80px">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Servicio Mudanza</span>
+                        <div class="selector.cantidad">
+                            <i class=" fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$390</span>
+                    </div>
+                    <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                </div>
+
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu total</strong>
+                    <span class="carrito-precio-total">$1470</span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<script src="~/js/carritoscript.js"></script>
+
+</html>

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<LimpiaMAS.Models.TbDetalleservicio>
+@{
+    Layout = null;
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <title>LimpiaMAS</title>
+    <link rel="stylesheet" href="~/css/estilosCarritoGrabado.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1ba4eac34d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <label class="arriba">
+        <label>LIMPIA MÁS LA MÁS CONFIABLE </label>
+        <label>LIMPIA MÁS LA MÁS CONFIABLE </label>
+        <label>LIMPIA MÁS LA MÁS CONFIABLE </label>
+        <label>LIMPIA MÁS LA MÁS CONFIABLE </label>
+
+    </label>
+
+
+    <div class="Usuario_titulo">
+        <i class="fa-solid fa-cart-shopping-fast"></i>
+        <h2 class="titulo">Finalizar Reserva </h2>
+        <i class="fa-regular fa-user"></i>
+
+
+    </div>
+
+
+    <div class="Barras">
+        <label class="barrita"> </label>
+        <label class="barrarita_gris"></label>
+
+    </div>
+    <form class="lista" asp-action="Pago" method="post">
+        <div class=" vertical">
+
+            <h3 class="subtitulo">Acuerdo de Compra </h3>
+            <label class="Acuerdo">
+                Haz clic aquí en pagar si estás de acuerdo con compartir tu correo electrónico con Electronic Arts. Electronic Arts usará tu dirección de correo electrónico con fines de marketing y para otros propósitos de conformidad con su<b>política de privacidad </b>, tambien
+                estas de acuerdo que hagamos uso de su tarjeta para cobrar el precio estipulado, asi como esta de acuerdo a nuestras<b>Politicas de Privacidad </b> y retención de
+                de datos para proximas compras.
+            </label>
+            <input type="submit" value="Pagar" readonly />
+            <a asp-action="Index">Regresar</a>
+        </div>
+
+    
+        @foreach (var detalle in Model)
+        {
+            <ul class="list-group list-group-horizontal" style="margin-left: 5vw;">
+                <li class="list-group-item"><label>@detalle.IdDetserv</label></li>
+                <li class="list-group-item"> <label>@detalle.NomapeLim</label> </li>
+                <li class="list-group-item"><label>@detalle.NomapeCli</label></li>
+                <li class="list-group-item"><label>@detalle.DirCli</label></li>
+                <li class="list-group-item"><label>@detalle.CatServ</label></li>
+                <li class="list-group-item"> <label>@detalle.FecServ.ToString("dd/MM/yyyy")</label></li>
+                <li class="list-group-item"><label>@detalle.DurServ</label></li>
+                <li class="list-group-item"><label>@detalle.ImpServ</label></li>
+                <li class="list-group-item"><label>@detalle.HoraDetserv</label></li>
+                <li class="list-group-item"><a asp-action="Eliminar" asp-route-id="@detalle.IdDetserv">Eliminar</a></li>
+
+            </ul>
+        }
+    </form>
+
+
+
+</body>
+</html>

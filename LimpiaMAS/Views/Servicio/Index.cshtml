@@ -1,0 +1,139 @@
+﻿@model IEnumerable<LimpiaMAS.Models.TbLimpiador>
+@using System.Text.Json
+@{
+    Layout = null;
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <title>LimpiaMAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/indexSeleccion.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="#">LIMPIAMÁS</a></div>
+        <ul class="links">
+            <li>
+                <a asp-controller="Limpia" asp-action="Servicios">Servicios</a>
+            </li>
+            <li>
+                <a asp-controller="Limpia" asp-action="Nosotros">Nosotros</a>
+            </li>
+            <li>
+                <a asp-controller="Limpia" asp-action="Login">Ingresar</a>
+            </li>
+            <li>
+                <a asp-controller="Trabajador" asp-action="FormTrabajador">Trabaja con nosotros</a>
+            </li>
+        </ul>
+        <a asp-controller="Servicio" asp-action="LogOut" class="register-btn">Cerrar Sesión</a>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div class="cajita">
+        <div class="info-bar">
+            <!-- contenido de la barra de información -->
+            <ul>
+                <li>
+                    <em>✓CALIDAD ASEGURADA</em>
+                </li>
+                <li>
+                    <em>✓GARANTÍA DE SATISFACCIÓN</em>
+                </li>
+                <li>
+                    <em>✓PRECIOS JUSTOS</em>
+                </li>
+                <li>
+                    <em>✓PROFESIONALISMO GARANTIZADO</em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <label class="textlabel">SELECCIONA A TU LIMPIADOR</label>
+        <div class="caja">
+            <section class="caja_limpiadores">
+                <div class="tarjeta">
+                    @foreach (var card in Model)
+                    {
+                        //SOLO SE MOSTRARAN LOS LIMPIADORES CON DISPONIBILIDAD MAYOR A MAÑANA
+                        @if (card.TbDisponibilidads != null && card.TbDisponibilidads.Any(d => d.FecDis.Date >= DateTime.Now.Date.AddDays(1)))
+                        {
+
+                            // Obtener las disponibilidades de mañana en adelante para el limpiador actual
+                            var disponibilidadesMañana = card.TbDisponibilidads.Where(d => d.FecDis.Date >= DateTime.Now.Date.AddDays(1));
+
+                            // Mostrar una tarjeta por cada disponibilidad
+                            foreach (var disponibilidad in disponibilidadesMañana)
+                            {
+                                <form asp-controller="Servicio" asp-action="Carrito" method="post">
+
+                                    <!--DATO PARA PASAR AL CONTROLADOR-->
+                                    <input type="hidden" name="idLimp" value=@card.IdLimp />
+                                    <input type="hidden" name="Nom" value=@card.NomLimp />
+                                    <input type="hidden" name="Ape" value=@card.ApeLimp />
+                                    <input type="hidden" name="Tarifa" value=@Math.Round(card.TarLimp, 2) />
+
+                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(card.FotLimp)" alt="Imagen" width="100" height="100">
+                                    <p>@card.NomLimp @card.ApeLimp</p>
+                                    <p>Tarifa: S/.@Math.Round(card.TarLimp, 2) por m^2</p>
+                                    <p>Servicio(s): </p>
+                                    <select name="catServicio" style="font-size:17px;">
+                                        @foreach (var opcion in JsonSerializer.Deserialize<List<string>>(@card.ServLimp))
+                                        {
+                                            <option>@opcion</option>
+                                        }
+                                    </select>
+
+                                    <!--PARA PASAR AL CONTROLADOR-->
+                                    <input type="hidden" name="Fecha" value=@disponibilidad.FecDis />
+                                    <input type="hidden" name="TInicial" value=@disponibilidad.TStart />
+                                    <input type="hidden" name="TFinal" value=@disponibilidad.TDone />
+
+                                    <div class="tarjeta_disponibilidad">
+                                        <p>Fecha: @disponibilidad.FecDis.ToString("dd/MM/yyyy")</p>
+                                        <p>Disponibilidad: <br>@disponibilidad.TStart - @disponibilidad.TDone</p>
+
+                                        <div class="boton_carrito">
+                                            <!--este boton lleva al carrito-->
+                                            <input type="submit" value="añadir al carrito" style="border: none; background: none; color: black; font-weight: bold; font-size:18px; cursor: pointer;" readonly />
+                                        </div>
+                                    </div>
+                                </form>
+                            }
+                        }
+                    }
+                </div>
+                </section>
+            <aside class="caja_filtrado">
+                <label>
+                    FILTRADOS
+                    <div class="form">
+                        <form asp-controller="Servicio" asp-action="Filtrado" method="post">
+                            <br><span>•Fecha para el servicio:</span><br>
+                            <input name="fecha" type="date"><br>
+                            <span>•Intervalo de inicio para el servicio:</span><br>
+                            <input name ="fecha_inicio"type="date"><br>
+                            <span>•Intervalo final para el servicio:</span><br>
+                            <input name="fecha_fin" type="date"><br><br>
+                            <div class="boton">
+                                <input type="submit" value="Filtrar">
+                            </div>
+                        </form>
+
+                        <div class="boton_carrito">
+                            <a>ir al carrito</a>
+                        </div>
+                    </div>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

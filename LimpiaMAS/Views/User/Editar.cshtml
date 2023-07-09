@@ -1,0 +1,22 @@
+﻿@model LimpiaMAS.Models.TbUser
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+</head>
+<body>
+    <div class="tabla">
+    </div>
+    <form asp-controller="User" asp-action="editarUser" method="post">
+        <input type="hidden" asp-for="IdUsr"/>
+        Usuario:<input type="text" asp-for="Usr" placeholder="Ingrese el nuevo Usuario" required />
+        Contraseña:<input type="text" asp-for="Pwd" placeholder="Ingrese la nueva contraseña del Usuario" required />
+        Nombre:<input type="text" asp-for="Nom" placeholder="Ingrese el nuevo nombre del Usuario" required />
+        Apellido:<input type="text" asp-for="Ape" placeholder="Ingresar el nuevo apellido del Usuario" required />
+        <input type="submit" value="Grabar" />
+    </form>
+</body>
+</html>
