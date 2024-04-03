@@ -1,4 +1,4 @@
-Web based application that acts as an intermediary between people who offer cleaning services and others who are willing to take the service developed with ASP.NET CORE 7 and C#
+Web based application that acts as an intermediary between people who offer cleaning services and others who are willing to take the service developed with ASP.NET CORE 7 and C#. Basically the idea arose when identifying a sector that had no way to connect directly between people, we discovered that there were alternatives in Europe (Spain) for this service and we applied what we saw to local context.
 
 Landing:
 
